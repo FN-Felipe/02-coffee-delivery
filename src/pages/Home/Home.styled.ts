@@ -85,9 +85,9 @@ export const ContainerMenu = styled.div`
 `
 
 export const CoffeeContainer = styled.div`
-   width: 100%;
-    gap: 3rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 9.8125rem;
+  width: 100%;
+  gap: 3rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 9.8125rem;
 `

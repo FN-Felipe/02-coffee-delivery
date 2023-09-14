@@ -30,8 +30,8 @@ export const ContainerContent = styled.div`
 export const BadgeRoot = styled.div`
   display: flex;
   gap: 0.25rem;
-  margin-top: 0.6;
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: fit-content;
   justify-content: center;
 `
