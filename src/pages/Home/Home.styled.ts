@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerRoot = styled.div`
+export const ContainerIntrodution = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ export const ContainerRoot = styled.div`
 export const ContainerDescription = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   gap: 1rem;
 
   h1 {
@@ -25,13 +25,69 @@ export const ContainerDescription = styled.div`
   h4 {
     font-weight: normal;
     color: ${props => props.theme['base-subtitle']};
+    font-size: 1.25rem;
   }
 `
 
 export const ContainerDetails = styled.div`
-  display: grid;
-  grid-template-columns: 1fr; 
-  margin-top: 4.125rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
 `
 
-export const ContainerItem = styled.div``
+export const ContainerItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: ${props => props.theme['base-text']};
+`
+
+export type ContainerIconVariant = 'cart' | 'timer' | 'coffee' | 'package'
+
+interface ContainerIconProps {
+  variant: ContainerIconVariant
+}
+
+const containerIconVariant = {
+  cart: 'yellow-dark',
+  timer: 'yellow',
+  coffee: 'purple',
+  package: 'base-text'
+}
+
+export const ContainerIcon = styled.div<ContainerIconProps>`
+  display: flex;
+  border-radius: 9999999%;
+  width: 2rem;
+  height: 2rem;
+  color: ${props => props.theme['white']};
+  justify-content: center;
+  align-items: center;
+
+  ${props => {
+    return `background-color: ${props.theme[containerIconVariant[props.variant]]}`
+  }}
+`
+
+export const ContainerMenu = styled.div`
+  width: 100%;
+  gap: 3.375rem;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 2rem;
+    font-family: 'Baloo 2', sans-serif;
+    color: ${props => props.theme['base-subtitle']};
+  }
+`
+
+export const CoffeeContainer = styled.div`
+   width: 100%;
+    gap: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 9.8125rem;
+`
