@@ -87,16 +87,3 @@ export const Price = styled.div`
   }
 `
 
-export const Count = styled.div`
-  display: flex;
-  border-radius: 6px;
-  width: 4.5rem;
-  height: 2.375rem;
-  gap: 0.5rem;
-
-  align-items: center;
-  justify-content: center;
-
-  background-color: ${props => props.theme['base-button']};
-  color: ${props => props.theme['base-title']};
-`
