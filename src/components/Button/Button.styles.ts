@@ -107,7 +107,7 @@ export const Method = styled.div<MethodCheck>`
 
   background-color: ${props => props.checked ? props.theme['purple-light'] : props.theme['base-button']};
   color: ${props => props.theme['purple']};
-  border: 1px solid transparent;
+  border: 1px solid ${props => props.checked ? props.theme['purple'] : props.theme['base-button']};
   
   p {
     color: ${props => props.theme['base-text']};

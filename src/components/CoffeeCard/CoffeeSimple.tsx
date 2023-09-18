@@ -4,19 +4,26 @@ import { CartContainer, CartItem, DetailsSimple } from "./CoffeeSimple.styles";
 import { useState } from "react";
 import { ShoppingCartType } from "../../@types/ShoppingCart";
 import { useContextApp } from "../../context/AppContext";
+import { Coffees } from "../../@types/coffees";
 
 export function CoffeeSimple({ coffee }: { coffee: ShoppingCartType }) {
-  const { remove } = useContextApp()
+  const { remove, addCart } = useContextApp()
   const [count, setCount] = useState<number>(coffee.quantity)
 
   function changeSetCountPlus() {
     setCount(count + 1)
+    handleIncludeCart(coffee, count + 1)
   }
 
   function changeSetCountMinus() {
     if (count === 0) return
     setCount(count - 1)
   }
+
+  function handleIncludeCart({ badge, description, image, key, price, title }: Coffees, quantity: number) {
+    addCart({ badge, description, image, key, price, title, quantity })
+  }
+
   return (
     <CartContainer>
       <CartItem>
