@@ -19,7 +19,7 @@ export function CoffeeCard({ coffees }: { coffees: Coffees }) {
   }
 
   function handleIncludeCart({ badge, description, image, key, price, title }: Coffees, quantity: number) {
-    addCart({ badge, description, image, key, price, title, quantity })
+    if (quantity >= 1) addCart({ badge, description, image, key, price, title, quantity })
   }
 
   return (

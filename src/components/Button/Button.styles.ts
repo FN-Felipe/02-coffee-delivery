@@ -160,6 +160,7 @@ export const Confirmation = styled.button`
   border: 0;
   border-radius: 6px;
   padding: 0.875rem;
+  cursor: pointer;
 
   margin-top: 1rem;
 
@@ -169,5 +170,10 @@ export const Confirmation = styled.button`
 
   &:hover {
     background-color: ${props => props.theme['yellow-dark']};
+  }
+
+  &:disabled {
+    background-color: rgb(0, 0, 0, 0.3);
+    cursor: not-allowed;
   }
 `

@@ -16,8 +16,9 @@ export function CoffeeSimple({ coffee }: { coffee: ShoppingCartType }) {
   }
 
   function changeSetCountMinus() {
-    if (count === 0) return
+    if (count === 1) return
     setCount(count - 1)
+    handleIncludeCart(coffee, count - 1)
   }
 
   function handleIncludeCart({ badge, description, image, key, price, title }: Coffees, quantity: number) {
